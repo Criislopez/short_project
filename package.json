@@ -1,0 +1,21 @@
+{
+  "name": "app-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "node scripts/create-migration",
+    "db:migrate": "node --env-file=.env --env-file=.env.local  scripts/migrate-up",
+    "db:rollback":"node --env-file=.env --env-file=.env.local  scripts/migrate-down"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "slonik": "^49.10.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
