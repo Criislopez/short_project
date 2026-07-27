@@ -21,6 +21,6 @@ jobs:
         run: npm install
 
       - name: Run rollback (staging)
-        run: node run scripts/migrate-down
+        run: node scripts/migrate-down
         env:
           DB_URL: ${{ secrets.DB_URL }}
