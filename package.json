@@ -7,12 +7,17 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "db:create": "node scripts/create-migration",
+    "dev": "nodemon --env-file=.env --env-file=.env.local src",
+    "start": "node src",
+    "db:create": "node --env-file=.env --env-file=.env.local scripts/create-migration",
     "db:migrate": "node --env-file=.env --env-file=.env.local  scripts/migrate-up",
-    "db:rollback":"node --env-file=.env --env-file=.env.local  scripts/migrate-down"
+    "db:rollback": "node --env-file=.env --env-file=.env.local  scripts/migrate-down"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "slonik": "^49.10.7"
   },
   "devDependencies": {
